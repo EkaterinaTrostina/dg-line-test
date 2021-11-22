@@ -35,7 +35,9 @@
         margin: 0 auto;
         margin-top: 17px;
         padding: 8px;
-        width: 104px;
+        
+        min-width: 104px;
+        max-width: 90%;
 
         font-size: 14px;
         text-align: center;
@@ -48,18 +50,17 @@
             width: 100%;
             left: 0;
             background-color: #c7c7c7;
+            border-radius: 10px;
         }
         &::before {
-            height: 55%;
             top: 1px;
+            bottom: 4px;
             transform: skew(0, 1deg);
-            border-radius: 10px 10px 0 0;
         }
         &::after {
-            height: 55%;
             bottom: 2px;
+            top: 4px;
             transform: skew(0, -1deg);
-            border-radius: 0 0 10px 10px;
         }
         &--first {
             margin-top: 14px;
