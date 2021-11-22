@@ -26,7 +26,6 @@
     }
     &__name {
         @include crop-text;
-        @include hero-name-color(c7c7c7);
 
         position: absolute;
         z-index: 2;
@@ -42,15 +41,38 @@
         text-align: center;
         color: $bg-color;
 
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        &::before, &:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            left: 0;
+            background-color: #c7c7c7;
+        }
+        &::before {
+            height: 55%;
+            top: 1px;
+            transform: skew(0, 1deg);
+            border-radius: 10px 10px 0 0;
+        }
+        &::after {
+            height: 55%;
+            bottom: 1px;
+            transform: skew(0, -1deg);
+            border-radius: 0 0 10px 10px;
+        }
         &--first {
-            @include hero-name-color(FCC211);
             margin-top: 14px;
+            
+            &::before, &:after {
+                background: $main-color;
+            }        
         }
         &--third {
-            @include hero-name-color(BE8D69);
+            &::before, &:after {
+                background: #BE8D69;
+            }
+            
         }
     }
     &-info {
