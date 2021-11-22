@@ -42,6 +42,9 @@
         text-align: center;
         color: $bg-color;
 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
         &--first {
             @include hero-name-color(FCC211);
             margin-top: 14px;
@@ -54,7 +57,7 @@
         position: relative;
         z-index: 1;
         max-width: 184px;
-        
+
         padding: 20px 10px;
         margin-top: 31px;
 
@@ -69,8 +72,8 @@
             border: 1px solid #c7c7c7;
         }
         &::before {
-            left: 4px;
-            transform: skew(6deg);
+            left: 0;
+            transform: skew(4deg);
             border-right: 0;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
@@ -85,6 +88,12 @@
             &::before, &:after {
                 border-color: $main-color;
             }
+            &:before {
+                transform: skew(2deg);
+            }
+            &::after {
+                transform: skew(-3deg)
+            }
         }
         &--third {
             transform: skew(-1.62deg);
@@ -93,7 +102,7 @@
             }
 
             &::after {
-                transform: skew( -4deg);
+                transform: skew( -2deg);
                 right: -4px;
                 border-left: 0;
             }
