@@ -1,0 +1,27 @@
+.button {   
+    @include center-position;
+    @include shape (240px, $primary-color, 15px, skew(8deg), skew(-8deg), 8px, 8px);
+
+    padding: 13px 15px;
+
+    font-weight: bold;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    text-align: center;
+
+    transition: all .5s ease;
+
+    &--main {
+        min-width: 228px;
+        color: #FFFFFF;
+        
+        &:before, &::after {
+            background-color: #E93E3A;
+        }
+    }
+
+    &:hover {
+        opacity: .8;
+        transform: scale(1.1);
+    }
+}

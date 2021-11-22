@@ -1,0 +1,60 @@
+@mixin title {
+    margin: 0;
+
+    font-family: $font-family-title;
+
+    letter-spacing: 0.06em;
+
+    text-align: center;
+
+    color: $main-color;
+}
+
+@mixin shape ($width, $background-color, $border-radius, $transform-left, $transform-right, $left-position, $right-position) {
+    position: relative;
+    z-index: 1;
+    min-width: $width;
+
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        bottom: 0;
+        z-index: -1;
+        background-color: $background-color;
+
+        border-radius: $border-radius;
+    }
+    &::before {
+        transform: $transform-right;
+		left: $left-position;
+    }
+
+    &::after {
+        left: auto;
+        transform: $transform-left;
+		right: $right-position;
+    }
+}
+
+@mixin hero-name-color($color) {
+    background-image: url("data:image/svg+xml,%3Csvg width='105' height='30' viewBox='0 0 105 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M102.524 11.3944C102.912 6.48035 99.0527 2.26729 94.1234 2.22472L10.892 1.50592C6.01197 1.46377 2.09866 5.53017 2.32796 10.405L2.77523 19.9141C2.99067 24.4943 6.80006 28.0781 11.3849 28.0139L93.565 26.863C97.9534 26.8015 101.574 23.4091 101.919 19.0339L102.524 11.3944Z' fill='%23#{$color}' stroke='%23#{$color}' stroke-width='3'/%3E%3C/svg%3E%0A");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin crop-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin center-position {
+    display: block;
+    margin: 0 auto;
+}
+
+@mixin gradient($bg-color) {
+    background: linear-gradient(180deg, rgba(48, 33, 67, 0) 0%, $bg-color 100%);
+}

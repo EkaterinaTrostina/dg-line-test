@@ -1,0 +1,39 @@
+.main-block { 
+    position: relative;
+    padding-top: 126px;
+    background: linear-gradient(180deg, rgba(5, 7, 26, 0) 68.13%, #05071A 99.19%), linear-gradient(270deg, rgba(5, 7, 26, 0) 1.41%, rgba(5, 7, 26, 0.86) 32.32%, rgba(5, 7, 26, 0.69) 46.2%, rgba(5, 7, 26, 0.84) 61.48%, rgba(5, 7, 26, 0) 71.8%), url('../img/main-block-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__descr {
+        @include center-position;
+        
+        margin-top: 12px;
+        margin-bottom: 20px;
+        max-width: 521px;
+    }
+
+    &__char {
+        display: block;
+
+        position: absolute;
+        bottom: 0;
+       
+        &--left {
+            left: 0;
+            transform: translateY(117px);
+            margin-left: 28px;
+        }
+        &--right {
+            right: 0;
+            transform: translateY(90px);
+            margin-right: 28px;
+        }
+
+        @media #{$screen-medium}{
+            display: none;
+            
+        }
+    }
+}

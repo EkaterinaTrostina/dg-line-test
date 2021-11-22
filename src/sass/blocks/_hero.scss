@@ -1,0 +1,135 @@
+.hero{
+    position: relative;
+    max-width: max-content;
+    
+    &-imgs {
+        position: relative;
+        z-index: 1;
+        padding: 0 13px;
+        
+        &--first {
+            padding: 0 10px;
+        }
+
+        &__main-img {
+            position: absolute;
+            left: 0%;
+
+            margin-left: 47px;
+            margin-top: 61px;
+            
+            &--first {
+                margin-top: 82px;
+                margin-left: 48px;
+            }
+        }
+    }
+    &__name {
+        @include crop-text;
+        @include hero-name-color(c7c7c7);
+
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        transform: translateX(-50%);
+
+        margin: 0 auto;
+        margin-top: 17px;
+        padding: 8px;
+        width: 104px;
+
+        font-size: 14px;
+        text-align: center;
+        color: $bg-color;
+
+        &--first {
+            @include hero-name-color(FCC211);
+            margin-top: 14px;
+        }
+        &--third {
+            @include hero-name-color(BE8D69);
+        }
+    }
+    &-info {
+        position: relative;
+        z-index: 1;
+        padding: 20px 10px;
+        margin-top: 31px;
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 55%;
+            height: 100%;
+            top: 0;
+            background-color: $bg-color;
+            border: 1px solid #c7c7c7;
+        }
+        &::before {
+            left: 4px;
+            transform: skew(6deg);
+            border-right: 0;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        &::after {
+            right: 0;
+            border-left: 0;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        &--first {
+            &::before, &:after {
+                border-color: $main-color;
+            }
+        }
+        &--third {
+            transform: skew(-1.62deg);
+            &::before, &:after {
+                border-color: #BE8D69;
+            }
+
+            &::after {
+                transform: skew( -4deg);
+                right: -4px;
+                border-left: 0;
+            }
+            & > div {
+                transform: skew(1.62deg);
+            }
+
+        } 
+
+        &__wrap {
+            display: flex;
+            justify-content: space-around;
+
+            width: 100%;
+            transform: skew(-1.62deg);
+            &:nth-child(2) {
+                margin-top: 15px;
+            }
+
+        }
+        &__bet, &__win {
+            @include crop-text;
+            
+            flex-basis: 50%;
+
+            font-weight: $font-weight-bold;
+            font-size: $font-size-normal;
+            line-height: $line-height-normal;
+            
+            text-transform: uppercase;
+            text-align: center;
+           
+        }
+        &__bet {
+            color: #FFFAF3;
+        }
+        &__win {
+            color: $main-color;
+        }
+    }
+}

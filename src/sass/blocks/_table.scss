@@ -1,0 +1,13 @@
+
+.table {
+    margin: 0 auto;
+    table-layout: fixed;
+    width: 100%;
+
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    
+    &__button {
+        margin-top: 27px;
+    }
+}

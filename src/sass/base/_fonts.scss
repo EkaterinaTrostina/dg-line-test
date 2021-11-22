@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Merriweather Sans';
+    src: url('../fonts/MerriweatherSans-Regular.woff')format('woff'),
+         url('../fonts/MerriweatherSans-Regular.woff2')format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Merriweather Sans';
+    src: url('../fonts/MerriweatherSans-Bold.woff') format('woff'),
+         url('../fonts/MerriweatherSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AA_BadaBoom_BB';
+    src: url('../fonts/AA_BadaBoom_BB.woff') format('woff'),
+         url('../fonts/AA_BadaBoom_BB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

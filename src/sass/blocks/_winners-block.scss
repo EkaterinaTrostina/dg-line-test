@@ -1,0 +1,9 @@
+.winners-block {
+    padding-top: 28px;
+    padding-bottom: 100px;
+
+    background: linear-gradient(180deg, $bg-color -1.58%, rgba(5, 7, 26, 0) 52.62%), linear-gradient(180deg, rgba(5, 7, 26, 0) 64.74%, $bg-color 99.19%), linear-gradient(270deg, rgba(5, 7, 26, 0) 1.41%, rgba(5, 7, 26, 0.56) 22.46%, rgba(5, 7, 26, 0.8) 46.2%, rgba(5, 7, 26, 0.592) 69.94%, rgba(5, 7, 26, 0) 87.41%), url('../img/winners-block-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

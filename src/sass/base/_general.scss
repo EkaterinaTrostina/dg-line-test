@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+};
+
+html {
+    font-family: $font-family-default;
+    font-size: 100%;
+
+    background-color: $bg-color;
+    color: $primary-color;
+
+};
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-size: $font-size-small;
+    font-weight: $font-weight-regular;
+    line-height: $line-height-small;
+};
+
+section {
+    @media #{$screen-normal}{
+        padding: 0 10px
+    }
+}
+
+h1 {
+    @include title;
+
+    font-size: $font-size-title-big;
+
+    text-transform: uppercase;
+};
+
+h2 {
+    @include title;
+
+    font-size: $font-size-title-medium;
+}
+
+p {
+    font-weight: 400;
+    font-size: $font-size-base;
+    line-height: 1.5;
+
+    text-align: center;
+
+    color: $primary-color;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+};
+
+button {
+    padding: 0;
+    background: none;
+    border: none;
+    
+    cursor: pointer;
+};
+
+
+th, td {
+    @include crop-text;
+    max-width: 25%;
+    padding: 13px;
+    
+    line-height: 105%;
+    color: $other-color;
+    
+    white-space: nowrap;
+}
+
+th {
+    font-weight: 700;
+}
+
+thead {
+    background-color: #beb1b1;
+    border-radius: 10px 10px 0px 0px;
+    tr {
+        background-color: $primary-color;
+        border-radius: 10px 10px 0px 0px;
+        th {
+            padding: 17px;
+            &:first-child {
+                border-top-left-radius: 10px;
+            }
+            &:last-child {
+                border-top-right-radius: 10px;
+            }
+        }
+    }
+}
+
+tbody {
+    tr {
+        border-top: 1px solid black;
+        &:first-child {
+            border: none;
+        };
+        &:last-child {
+            background: #DCDCDC;
+            border-radius: 0px 0px 10px 10px;
+            td  {
+                &:first-child {
+                    border-bottom-left-radius: 10px;
+                }
+                &:last-child {
+                    border-bottom-right-radius: 10px;
+                }
+            }
+        }
+        &:nth-last-child(2) {
+            background: #DCDCDC;
+        }
+    }
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+
+
+.container {
+    @include center-position;
+
+    position: relative;
+    z-index: 0;
+
+    width: 828px;
+
+    @media #{$screen-medium}{
+        width: 700px;
+    }
+    
+    @media #{$screen-normal}{
+        width: 100%;
+    }
+
+}
